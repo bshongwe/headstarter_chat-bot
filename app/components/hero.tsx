@@ -67,74 +67,9 @@ const Hero = () => {
                 transition={{ duration: 0.5, ease: 'easeOut', delay: 0.2 }}
                 className='text-base text-muted-foreground lg:text-lg'
             >
-                Hi. How can <span className='text-primary'>Bunny-Ai</span>
+                Hi. How can <span className='text-primary'>Bunny-Ai </span>
                 help you today? {' '}
-                <span className='hidden lg:block'>
-                    Type your prompts below...
-                </span>
             </motion.p>
-            <motion.form
-                initial={{ opacity: 0, y: -10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, ease: 'easeOut', delay: 0.4 }}
-                onSubmit={handleSubmit}
-                className='mx-auto mt-8 flex w-full max-w-sm flex-col items-end space-y-2'
-            >
-                <div className='flex w-full max-w-sm flex-col items-start gap-1.5'>
-                    <Label
-                        className='text-left text-muted-foreground'
-                        htmlFor='email'
-                    >
-                        START FOR FREE HERE
-                    </Label>
-                    <Input
-                        required
-                        type='email'
-                        id='email'
-                        placeholder='user@email.com'
-                        name='email'
-                    />
-                </div>
-                {!state.succeeded && (
-                    <Button
-                        className={cn(
-                            'flex w-full justify-between',
-                            state.submitting && 'justify-center'
-                        )}
-                        type='submit'
-                        disabled={state.submitting}
-                    >
-                        {state.submitting && (
-                            <Loader2Icon className='mr-2 h-4 w-4 animate-spin' />
-                        )}
-                        {state.submitting && 'Joining'}
-                        {!state.submitting && 'Join the waitlist'}
-                        {!state.submitting && (
-                            <MoveRightIcon className='h-4 w-4' />
-                        )}
-                    </Button>
-                )}
-                {state.succeeded && (
-                    <Button
-                        variant={'secondary'}
-                        className='pointer-events-none w-full'
-                    >
-                        You've successfully joined the waitlist! 🔥
-                    </Button>
-                )}
-                {!state.succeeded && (
-                    <p className='w-full text-center text-sm text-muted-foreground'>
-                        Caution: an AI can make errors. Be a smart user.
-                    </p>
-                )}
-                {state.succeeded && (
-                    <p className='w-full text-center text-sm text-muted-foreground'>
-                        Welcome to the future of SaaS!
-                    </p>
-                )}
-                <p className='w-full text-center text-sm text-muted-foreground'></p>
-            </motion.form>
             {theme !== 'rose' &&
                 theme !== 'green' &&
                 theme !== 'orange' &&
