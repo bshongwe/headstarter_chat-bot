@@ -52,6 +52,7 @@ const Navbar = () => {
                         aria-label='my user profile'
                     >
                         <UserIcon className='h-5 w-5' />
+                        Sign-in
                     </a>
                     <a
                         href='https://github.com/'
@@ -61,6 +62,7 @@ const Navbar = () => {
                         aria-label='my shopping cart'
                     >
                         <GithubIcon className='h-5 w-5' />
+                        Signup
                     </a>
                     <Select
                         onValueChange={(theme: ThemeName) => {
