@@ -70,7 +70,7 @@ const Navbar = () => {
                         value={theme}
                     >
                         <SelectTrigger
-                            className='w-[70px]'
+                            className='w-[100px]'
                             aria-label='customize theme'
                         >
                             <SelectValue placeholder='Customize' />
