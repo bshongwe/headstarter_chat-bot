@@ -1,0 +1,5 @@
+# Redirect old URLs to new ones
+/old-page  /new-page  301
+
+# Ensure trailing slashes
+/*  /:splat  301!
