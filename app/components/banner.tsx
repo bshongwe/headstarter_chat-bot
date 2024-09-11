@@ -40,7 +40,7 @@ const Banner = () => {
                                     className='text-left text-muted-foreground'
                                     htmlFor='email-banner'
                                 >
-                                    CHAT BLOCK
+                                    TYPE HERE
                                 </Label>
                                 <Input
                                     name='email-banner'
