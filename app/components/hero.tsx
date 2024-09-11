@@ -70,6 +70,75 @@ const Hero = () => {
                 Hi. How can <span className='text-primary'>Bunny-Ai </span>
                 help you today? {' '}
             </motion.p>
+            <motion.form
+                initial={{ opacity: 0, y: -10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, ease: 'easeOut', delay: 0.4 }}
+                onSubmit={handleSubmit}
+                className='mx-auto mt-8 flex w-full max-w-sm flex-col items-end space-y-2'
+            >
+                <div className='flex w-full max-w-sm flex-col items-start gap-1.5'>
+                    <Label
+                        className='text-left text-muted-foreground'
+                        htmlFor='email'
+                    >
+                        Returning users
+                    </Label>
+                    <Input
+                        required
+                        type='email'
+                        id='email'
+                        placeholder='user@email.com'
+                        name='email'
+                    />
+                    <Input
+                        required
+                        type='password'
+                        id='password'
+                        placeholder='password'
+                        name='password'
+                    />
+                </div>
+                {!state.succeeded && (
+                    <Button
+                        className={cn(
+                            'flex w-full justify-between',
+                            state.submitting && 'justify-center'
+                        )}
+                        type='submit'
+                        disabled={state.submitting}
+                    >
+                        {state.submitting && (
+                            <Loader2Icon className='mr-2 h-4 w-4 animate-spin' />
+                        )}
+                        {state.submitting && 'Verifying...'}
+                        {!state.submitting && 'Sign in'}
+                        {!state.submitting && (
+                            <MoveRightIcon className='h-4 w-4' />
+                        )}
+                    </Button>
+                )}
+                {state.succeeded && (
+                    <Button
+                        variant={'secondary'}
+                        className='pointer-events-none w-full'
+                    >
+                        Your password has been approved! 🔥
+                    </Button>
+                )}
+                {!state.succeeded && (
+                    <p className='w-full text-center text-sm text-muted-foreground'>
+                        Bunny-Ai and 1 000+ members await you!
+                    </p>
+                )}
+                {state.succeeded && (
+                    <p className='w-full text-center text-sm text-muted-foreground'>
+                        Welcome to the future of SaaS!
+                    </p>
+                )}
+                <p className='w-full text-center text-sm text-muted-foreground'></p>
+            </motion.form>
             {theme !== 'rose' &&
                 theme !== 'green' &&
                 theme !== 'orange' &&
