@@ -23,9 +23,9 @@ const OrbitingCircles = memo(
     delay = 10,
     radius = 50,
     path = true,
-    strokeColor = "orange", // Set default to orange
-    strokeWidth = 2,        // Increased stroke width for better visibility
-    backgroundColor = "black", // Set default to black
+    strokeColor = "orange",
+    strokeWidth = 2,
+    backgroundColor = "black",
   }: OrbitingCirclesProps) => {
     return (
       <>
@@ -41,7 +41,7 @@ const OrbitingCircles = memo(
               cy="50%"
               r={radius}
               fill="none"
-              stroke={strokeColor} // Use orange stroke by default
+              stroke={strokeColor}
               strokeWidth={strokeWidth}
             />
           </svg>
@@ -53,7 +53,7 @@ const OrbitingCircles = memo(
               "--duration": `${duration}s`,
               "--radius": `${radius}px`,
               "--delay": `-${delay}s`,
-              "--background": backgroundColor, // Set to black by default
+              "--background": backgroundColor,
             } as React.CSSProperties
           }
           className={cn(
