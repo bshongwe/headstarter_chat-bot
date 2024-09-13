@@ -14,7 +14,7 @@ const featuresData: FeatureCardProps[] = [
     {
         title: 'Can I customise Bunny-Ai?',
         description:
-            'Bunny-Ai can be integrated into your system as an add-on or as a customised standalone feature.',
+            'Bunny-Ai can be integrated into your system as an add-on or as a standalone feature',
         icon: <SettingsIcon size={28} className='text-blue-500' />,
         backgroundColor: 'from-blue-500/20 to-blue-500/5',
     },
@@ -33,7 +33,7 @@ const featuresData: FeatureCardProps[] = [
     {
         title: 'Can I integrate Bunny-Ai?',
         description:
-            'Bunny-Ai can be integrated into your system as an add-on or as a customised standalone feature.',
+            'Bunny-Ai can be integrated into your system as an add-on or as a standalone feature.',
         icon: <BlocksIcon className='text-red-500' />,
         backgroundColor: 'from-red-500/20 to-red-500/5',
     },
