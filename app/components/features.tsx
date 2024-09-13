@@ -12,40 +12,40 @@ import FeatureCard from './feature-card'
 
 const featuresData: FeatureCardProps[] = [
     {
-        title: 'Highly Customizable',
+        title: 'Can I customise Bunny-Ai?',
         description:
             'You can integrate Bunny-Ai into your system as an add-on or as a customised standalone feature.',
         icon: <SettingsIcon size={28} className='text-blue-500' />,
         backgroundColor: 'from-blue-500/20 to-blue-500/5',
     },
     {
-        title: 'Secure and Reliable',
+        title: 'Is my user data safe with Bunny-Ai?',
         description: 'We take cybersecurity seriously and ensure your data is safe. Data privacy is our priority.',
         icon: <ShieldCheckIcon size={28} className='text-green-500' />,
         backgroundColor: 'from-green-500/20 to-green-500/5',
     },
     {
-        title: 'Easy to Use',
+        title: 'Is Bunny-Ai user-freindly?',
         description: 'Bunny-Ai is easy to use. For developers and integration, please use our documentation.',
         icon: <ZapIcon size={28} className='text-yellow-500' />,
         backgroundColor: 'from-yellow-500/20 to-yellow-500/5',
     },
     {
-        title: 'Powerful Integrations',
+        title: 'Can I integrate Bunny-Ai?',
         description:
             'Integrate Bunny-Ai with your favorite tools and services. Read our documentation for additional information.',
         icon: <BlocksIcon className='text-red-500' />,
         backgroundColor: 'from-red-500/20 to-red-500/5',
     },
     {
-        title: 'Affordable Pricing',
+        title: 'Is Bunny-Ai affordable?',
         description:
             'We offer affordable pricing plans for all users and business sizes so as to meet your budget and your needs.',
         icon: <DollarSignIcon className='text-pink-500' />,
         backgroundColor: 'from-pink-500/20 to-pink-500/5',
     },
     {
-        title: '24/7 Support',
+        title: 'I need Bunny-Ai support?',
         description: 'Our support team is available 24/7 to help you navigate or troubleshoot Bunny-Ai. Use the contact details provided.',
         icon: <MessagesSquareIcon size={28} className='text-purple-500' />,
         backgroundColor: 'from-purple-500/20 to-purple-500/5',
